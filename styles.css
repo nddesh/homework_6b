@@ -355,7 +355,7 @@ nav ul li {
 #leftContent {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-top: 150px;
   padding-right: 50px;
