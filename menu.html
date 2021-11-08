@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <title>Bun Bun Bake Shop - Menu</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="cart.html">Cart</a><p id="cartItems"></p></li>
+      </ul>
+    </nav>
+    <div id="logo">
+      <a href="index.html"><img src="images/logoHome.png" alt="Bun Bun logo"></a>
+    </div>
+  </header>
+  <section id="display">
+    <section>
+      <div id="names">
+        <div id="og"><h1>Original</h1></div>
+        <div id="bl"><h1>Blackberry</h1></div>
+        <div id="wl"><h1>Walnut</h1></div>
+        <div id="ogV"><h1>Original</h1><h3>Gluten-Free</h3></div>
+        <div id="ps"><h1>Pumpkin Spice</h1></div>
+        <div id="cp"><h1>Caramel Pecan</h1></div>
+      </div>
+    </section>
+
+    <!-- ITEMS -->
+    <section id="details" width='800px' height='auto'>
+      <div id="og1" class="visible">
+        <div id="left">
+          <img src="images/original.jpeg" alt="Original Roll">
+          <h5>Choose</h5>
+          <div id="selections">
+            <label for="glaze">Glaze</label>
+            <select id="glaze" name="glaze" onchange="dropdown1(this.value)">
+              <option value="Original">Original</option>
+              <option value="Sugar-milk">Sugar-milk</option>
+              <option value="Vanilla-milk">Vanilla-milk</option>
+              <option value="Double-chocolate">Double-chocolate</option>
+            </select>
+  
+            <label for="quant">Quantity</label>
+            <select id="quant" name="quant" onchange="dropdown2(this.value)">
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+        </div>
+        <div id="right">
+          <h4>Original</h4>
+          <h2 id="ogPrice">$1.50</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non maecenas amet varius dictum consequat nibh pretium. Sit velit porttitor enim augue vulputate.</p>
+          <div id="allergens">
+            <a>Ingredients</a>
+            <a>Allergens</a>
+          </div>
+          <button id="ogAdd" onclick="addItem();">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div id="bl1">
+        <div id="left">
+          <img src="images/blackberry.png" alt="Blackberry Roll">
+          <h5>Choose</h5>
+          <div id="selections">
+            <label for="glaze">Glaze</label>
+            <select id="glaze" name="glaze">
+              <option value="None">Original</option>
+              <option value="Sugar-milk">Sugar-milk</option>
+              <option value="Vanilla-milk">Vanilla-milk</option>
+              <option value="Double-chocolate">Double-chocolate</option>
+            </select>
+  
+            <label for="quant">Quantity</label>
+            <select id="quant" name="quant" onchange="dropdown2(this.value)">
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+        </div>
+        <div id="right">
+          <h4>Blackberry</h4>
+          <h2 id="blPrice">$2.00</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non maecenas amet varius dictum consequat nibh pretium. Sit velit porttitor enim augue vulputate.</p>
+          <div id="allergens">
+            <a>Ingredients</a>
+            <a>Allergens</a>
+          </div>
+          <button id="blAdd">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div id="wl1">
+        <div id="left">
+          <img src="images/walnut.png" alt="Walnut Roll">
+          <h5>Choose</h5>
+          <div id="selections">
+            <label for="glaze">Glaze</label>
+            <select id="glaze" name="glaze">
+              <option value="None">Original</option>
+              <option value="Sugar-milk">Sugar-milk</option>
+              <option value="Vanilla-milk">Vanilla-milk</option>
+              <option value="Double-chocolate">Double-chocolate</option>
+            </select>
+  
+            <label for="quant">Quantity</label>
+            <select id="quant" name="quant" onchange="dropdown2(this.value)">
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+        </div>
+        <div id="right">
+          <h4>Walnut</h4>
+          <h2 id="wlPrice">$2.00</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non maecenas amet varius dictum consequat nibh pretium. Sit velit porttitor enim augue vulputate.</p>
+          <div id="allergens">
+            <a>Ingredients</a>
+            <a>Allergens</a>
+          </div>
+          <button id="wlAdd">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div id="ogV1">
+        <div id="left">
+          <img src="images/original.jpeg" alt="Original (Gluten-Free) Roll">
+          <h5>Choose</h5>
+          <div id="selections">
+            <label for="glaze">Glaze</label>
+            <select id="glaze" name="glaze">
+              <option value="None">Original</option>
+              <option value="Sugar-milk">Sugar-milk</option>
+              <option value="Vanilla-milk">Vanilla-milk</option>
+              <option value="Double-chocolate">Double-chocolate</option>
+            </select>
+  
+            <label for="quant">Quantity</label>
+            <select id="quant" name="quant" onchange="dropdown2(this.value)">
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+        </div>
+        <div id="right">
+          <h4>Original (Gluten-Free)</h4>
+          <h2 id="ogVPrice">$1.50</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non maecenas amet varius dictum consequat nibh pretium. Sit velit porttitor enim augue vulputate.</p>
+          <div id="allergens">
+            <a>Ingredients</a>
+            <a>Allergens</a>
+          </div>
+          <button id="ogVAdd">Add to Cart</button>
+        </div>
+      </div>
+
+      <div id="ps1">
+        <div id="left">
+          <img src="images/pumpkin.png" alt="Pumpkin Spice Roll">
+          <h5>Choose</h5>
+          <div id="selections">
+            <label for="glaze">Glaze</label>
+            <select id="glaze" name="glaze">
+              <option value="None">Original</option>
+              <option value="Sugar-milk">Sugar-milk</option>
+              <option value="Vanilla-milk">Vanilla-milk</option>
+              <option value="Double-chocolate">Double-chocolate</option>
+            </select>
+  
+            <label for="quant">Quantity</label>
+            <select id="quant" name="quant" onchange="dropdown2(this.value)">
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+        </div>
+        <div id="right">
+          <h4>Pumpkin Spice</h4>
+          <h2 id="psPrice">$2.50</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non maecenas amet varius dictum consequat nibh pretium. Sit velit porttitor enim augue vulputate.</p>
+          <div id="allergens">
+            <a>Ingredients</a>
+            <a>Allergens</a>
+          </div>
+          <button id="psAdd">Add to Cart</button>
+        </div>
+      </div>
+
+      <div id="cp1">
+        <div id="left">
+          <img src="images/caramel.png" alt="Caramel Pecan Roll">
+          <h5>Choose</h5>
+          <div id="selections">
+            <label for="glaze">Glaze</label>
+            <select id="glaze" name="glaze">
+              <option value="None">Original</option>
+              <option value="Sugar-milk">Sugar-milk</option>
+              <option value="Vanilla-milk">Vanilla-milk</option>
+              <option value="Double-chocolate">Double-chocolate</option>
+            </select>
+  
+            <label for="quant">Quantity</label>
+            <select id="quant" name="quant" onchange="dropdown2(this.value)"></select>
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+        </div>
+        <div id="right">
+          <h4>Caramel Pecan</h4>
+          <h2 id="cpPrice">$2.50</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non maecenas amet varius dictum consequat nibh pretium. Sit velit porttitor enim augue vulputate.</p>
+          <div id="allergens">
+            <a>Ingredients</a>
+            <a>Allergens</a>
+          </div>
+          <button id="cpAdd">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <footer>
+    <div>
+      <h3>Location</h3>
+      <p>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit. <br>Pittsburgh, PA 15213</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>(412)-000-000</p>
+      <p>bunbunbake@email.com</p>
+    </div>
+  </footer>
+
+  <script src="scriptMenu.js"></script>
+  <script src="cart.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
